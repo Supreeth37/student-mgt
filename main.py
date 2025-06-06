@@ -8,6 +8,8 @@ def display_menu():
     print("3. Find Student by ID")
     print("4. Delete Student")
     print("5. Exit")
+print("6. Export to CSV")
+
 
 students = load_students()
 
@@ -44,10 +46,11 @@ while True:
             print("Student deleted.")
         else:
             print("Student not found.")
-
-    elif choice == '5':
+        elif choice == '5':
         print("Exiting program...")
         break
     else:
         print("Invalid choice. Try again.")
 
+elif choice == '6':
+    export_to_csv(students)
